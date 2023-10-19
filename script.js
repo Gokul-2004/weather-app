@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!location) {
             weatherOutput.textContent = "Location not provided";
         } else {
-            fetch(`http://localhost:3000/weather?location=${location}`)
+            fetch('/weather?location=' + location)
                 .then((response) => response.json())
                 .then((data) => {
                     const message = `Temperature in ${data.location}: ${data.temperature}°C, ${data.conditions}`;
