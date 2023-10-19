@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!location) {
             weatherOutput.textContent = "Location not provided";
         } else {
-            fetch('/weather?location=' + location)
+            fetch('https://present-weatherapp.netlify.app/' + location)
                 .then((response) => response.json())
                 .then((data) => {
                     const message = `Temperature in ${data.location}: ${data.temperature}°C, ${data.conditions}`;
